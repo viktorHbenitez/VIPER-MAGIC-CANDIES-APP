@@ -13,6 +13,10 @@
 		E42B99B9253D504F005FBAA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42B99B7253D504F005FBAA5 /* LaunchScreen.storyboard */; };
 		E42B99C7253D530B005FBAA5 /* CandyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B99C5253D530B005FBAA5 /* CandyView.swift */; };
 		E42B99C8253D530B005FBAA5 /* CandyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E42B99C6253D530B005FBAA5 /* CandyView.xib */; };
+		E4FDFD182552604600CB904D /* CandyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FDFD172552604600CB904D /* CandyEntity.swift */; };
+		E4FDFD1B2552608000CB904D /* CandyAPIWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FDFD1A2552608000CB904D /* CandyAPIWorker.swift */; };
+		E4FDFD1E2552624100CB904D /* CandyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FDFD1D2552624100CB904D /* CandyInteractor.swift */; };
+		E4FDFD21255264C300CB904D /* CandyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FDFD20255264C300CB904D /* CandyPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		E42B99BA253D504F005FBAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E42B99C5253D530B005FBAA5 /* CandyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandyView.swift; sourceTree = "<group>"; };
 		E42B99C6253D530B005FBAA5 /* CandyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CandyView.xib; sourceTree = "<group>"; };
+		E4FDFD172552604600CB904D /* CandyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandyEntity.swift; sourceTree = "<group>"; };
+		E4FDFD1A2552608000CB904D /* CandyAPIWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandyAPIWorker.swift; sourceTree = "<group>"; };
+		E4FDFD1D2552624100CB904D /* CandyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandyInteractor.swift; sourceTree = "<group>"; };
+		E4FDFD20255264C300CB904D /* CandyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandyPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +66,6 @@
 			children = (
 				E42B99AC253D504E005FBAA5 /* AppDelegate.swift */,
 				E42B99AE253D504E005FBAA5 /* SceneDelegate.swift */,
-				E42B99C5253D530B005FBAA5 /* CandyView.swift */,
-				E42B99C6253D530B005FBAA5 /* CandyView.xib */,
 				E42B99C4253D52D9005FBAA5 /* CandyModule */,
 				E42B99B5253D504F005FBAA5 /* Assets.xcassets */,
 				E42B99B7253D504F005FBAA5 /* LaunchScreen.storyboard */,
@@ -71,8 +77,62 @@
 		E42B99C4253D52D9005FBAA5 /* CandyModule */ = {
 			isa = PBXGroup;
 			children = (
+				E4FDFD1625525FCA00CB904D /* Worker */,
+				E4FDFD1525525FB600CB904D /* Router */,
+				E4FDFD1425525FAB00CB904D /* View */,
+				E4FDFD1325525F9F00CB904D /* Presenter */,
+				E4FDFD1225525F9200CB904D /* Interactor */,
+				E4FDFD1125525F8200CB904D /* Entity */,
 			);
 			path = CandyModule;
+			sourceTree = "<group>";
+		};
+		E4FDFD1125525F8200CB904D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E4FDFD172552604600CB904D /* CandyEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E4FDFD1225525F9200CB904D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E4FDFD1D2552624100CB904D /* CandyInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E4FDFD1325525F9F00CB904D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E4FDFD20255264C300CB904D /* CandyPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E4FDFD1425525FAB00CB904D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E42B99C5253D530B005FBAA5 /* CandyView.swift */,
+				E42B99C6253D530B005FBAA5 /* CandyView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4FDFD1525525FB600CB904D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E4FDFD1625525FCA00CB904D /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				E4FDFD1A2552608000CB904D /* CandyAPIWorker.swift */,
+			);
+			path = Worker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +205,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4FDFD1E2552624100CB904D /* CandyInteractor.swift in Sources */,
+				E4FDFD182552604600CB904D /* CandyEntity.swift in Sources */,
+				E4FDFD1B2552608000CB904D /* CandyAPIWorker.swift in Sources */,
 				E42B99C7253D530B005FBAA5 /* CandyView.swift in Sources */,
+				E4FDFD21255264C300CB904D /* CandyPresenter.swift in Sources */,
 				E42B99AD253D504E005FBAA5 /* AppDelegate.swift in Sources */,
 				E42B99AF253D504E005FBAA5 /* SceneDelegate.swift in Sources */,
 			);

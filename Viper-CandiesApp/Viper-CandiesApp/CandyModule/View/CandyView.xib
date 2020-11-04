@@ -9,6 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CandyView" customModule="Viper_CandiesApp" customModuleProvider="target">
             <connections>
+                <outlet property="descriptionLabel" destination="dSp-kG-WPM" id="Xux-eA-Wfa"/>
+                <outlet property="quantityLabel" destination="dB8-ho-TXi" id="ck9-Jf-jZx"/>
+                <outlet property="quantityStepper" destination="bOz-wN-HzP" id="vEG-ft-fXP"/>
                 <outlet property="view" destination="nuP-cv-4Ge" id="MU6-95-3dZ"/>
             </connections>
         </placeholder>
@@ -38,6 +41,9 @@
                 </label>
                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="RiW-nZ-dPh">
                     <rect key="frame" x="290" y="391" width="94" height="32"/>
+                    <connections>
+                        <action selector="quantityStepperValueChange:" destination="-1" eventType="valueChanged" id="5nU-bL-HhX"/>
+                    </connections>
                 </stepper>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="81W-gq-322">
                     <rect key="frame" x="33" y="772" width="351" height="70"/>

@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     window = UIWindow(windowScene: scene)
     let candyView = CandyView(nibName: "CandyView", bundle: nil)
-    candyView.view.backgroundColor = .red
+    candyView.view.backgroundColor = .white
     
     let navController = UINavigationController(rootViewController: candyView)
     window?.rootViewController = navController
