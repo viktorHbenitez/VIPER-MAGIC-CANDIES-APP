@@ -16,7 +16,7 @@ protocol CandyAPIWorkerProtocol {
 class CandyAPIWorker: CandyAPIWorkerProtocol {
   func fetchCandy(callBack: (CandyEntity) -> Void) {
     let candyEntity = CandyEntity(title: "Magic Candy",
-                                  description: "Magic candies coming from heaven, if you eat one and say a wish. Your wish will be granted.",
+                                  description: "Viktor VIPER.",
                                   price: 100,
                                   imageName: "magic_candy")
     callBack(candyEntity)
